@@ -1,0 +1,21 @@
+.nocaps {
+  text-transform: none;
+}
+.logo-container {
+  height: 54px;
+}
+.logo-codeschool {
+  margin-top: 4px;
+}
+
+.logo-codecademy {
+  height: 34px;
+  margin:15px 0 5px;
+
+}
+
+
+
+.service-box .form-group {
+  margin-top: 10px;
+}
