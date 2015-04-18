@@ -24,6 +24,8 @@
           $("#identities").find(".form-group").addClass("has-success").removeClass("has-error");;
           items = data;
 
+          $("#item-target").empty();
+
           for (var cat in items) {
             for (var i = 0; i < items[cat].length; i++) {
               items[cat][i].enabled = true;
