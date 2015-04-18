@@ -2,6 +2,7 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 var bodyParser = require('body-parser');
 var crawl = require(__dirname + '/lib/crawl');
+var validator = require('validator');
 
 var app = express();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -22,6 +23,14 @@ app.post("/generate", urlencodedParser, function (req, res) {
   var github = identities["github"];
   var codecademy = identities["codecademy"];
   var codeschool = identities["codeschool"];
+
+  for (var k in identities) {
+    if (identities[k]) {
+      if (!validator.isURL(identities[k])) {
+        return res.send(400);
+      }
+    }  
+  }
   
   crawl(identities, function(err, result) {
     if (err) {
