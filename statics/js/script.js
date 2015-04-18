@@ -16,9 +16,15 @@
       }
     }
     if (submittable) {
-      console.log(identities);
+      var jqxhr = $.post("/generate", identities)
+        .done(function() {
+          $("#identities").find(".form-group").addClass("has-success");
+        })
+        .fail(function() {
+          alert( "error" );
+        });
     } else {
-      console.log("nope");
+      console.log("not submittable");
     }
 
   }
