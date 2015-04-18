@@ -21,7 +21,7 @@
     if (submittable) {
       var jqxhr = $.post("/generate", identities)
         .done(function(data) {
-          $("#identities").find(".form-group").addClass("has-success");
+          $("#identities").find(".form-group").addClass("has-success").removeClass("has-error");;
           items = data;
 
           for (var cat in items) {
@@ -43,10 +43,14 @@
             evt.stopPropagation();
           })
           makeLatex();
-          $("#code-out-section").removeClass("hidden")
+          $("#code-out-section").removeClass("hidden");
+
+          $('html, body').stop().animate({
+              scrollTop: ($("#item-target").offset().top - 50)
+          }, 1250, 'easeInOutExpo');
         })
         .fail(function() {
-          alert( "error" );
+          $("#identities").find(".form-group").removeClass("has-success").addClass("has-error");
         });
     } else {
       console.log("not submittable");
