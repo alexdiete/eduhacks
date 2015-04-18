@@ -1,6 +1,7 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var crawl = require(__dirname + '/lib/crawl');
 
 var app = express();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -21,11 +22,13 @@ app.post("/generate", urlencodedParser, function (req, res) {
   var github = identities["github"];
   var codecademy = identities["codecademy"];
   var codeschool = identities["codeschool"];
-
-  res.setHeader("Content-Type", "application/json");
-  res.send(JSON.stringify({
-      "yolo" : "swag",
-  }))
+  
+  crawl(identities, function(err, result) {
+    if (err) {
+      return res.sendStatus(500);
+    }
+    return res.send(result);
+  })
 })
 
 app.listen(3333);
