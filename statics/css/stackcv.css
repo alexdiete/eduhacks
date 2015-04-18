@@ -13,9 +13,38 @@
   margin:15px 0 5px;
 
 }
-
-
-
+.item-box {
+  height: 190px;
+}
+.repolink {
+  color: #fff;
+}
+.portfolio-box .portfolio-box-caption {
+    opacity: 1;
+}
+.portfolio-box:hover .portfolio-box-caption {
+  opacity: 0.9;
+}
 .service-box .form-group {
   margin-top: 10px;
+}
+.portfolio-box.codecademy .portfolio-box-caption {
+  background: rgba(16, 158, 69,.9)
+}
+.portfolio-box.codeschool .portfolio-box-caption {
+  background: rgba(19, 104, 137,.9)
+}
+
+.portfolio-box.disabled {
+  opacity: 0.4;
+}
+
+.hljs-comment {
+  color: #8e908c;
+}
+.hljs-command {
+  color: #0e908c
+}
+.hljs-special {
+  color: #ff908c
 }

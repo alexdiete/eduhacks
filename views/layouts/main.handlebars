@@ -117,7 +117,7 @@
                         <h3>GitHub</h3>
                         <p class="text-muted">Include your public contributions in your CV.</p>
                         <div class="form-group col-md-8 col-md-offset-2">
-                          <input type="url" class="form-control" placeholder="GitHub Profile URL" name="github" />
+                          <input type="url" class="form-control" placeholder="GitHub Profile URL" name="github" value="https://github.com/alexdiete" />
                         </div>
                     </div>
                 </div>
@@ -129,17 +129,17 @@
                         <h3>Code School</h3>
                         <p class="text-muted">Include your completed courses in your CV.</p>
                         <div class="form-group col-md-8 col-md-offset-2">
-                          <input type="url" class="form-control" placeholder="Code School Profile URL" name="codeschool" />
+                          <input type="url" class="form-control" placeholder="Code School Profile URL" name="codeschool" value="https://www.codeschool.com/users/1221756" />
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
-                        <img src="/img/codecademy.svg" class="logo-codecademy" />
+                        <img src="/img/codecademy.svg" class="logo-codecademy wow bounceIn" data-wow-delay=".2s"  />
                         <h3>Codecademy</h3>
                         <p class="text-muted">Include your completed tracks in your CV.</p>
                         <div class="form-group col-md-8 col-md-offset-2">
-                          <input type="url" class="form-control" placeholder="Codecademy Profile URL" name="codecademy" />
+                          <input type="url" class="form-control" placeholder="Codecademy Profile URL" name="codecademy" value="http://www.codecademy.com/megaPro67813" />
                         </div>
                     </div>
                 </div>
@@ -154,112 +154,21 @@
             </form>
         </div>
     </section>
-
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="https://unsplash.it/650/350?image=535" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="https://unsplash.it/650/350?image=534" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="https://unsplash.it/650/350?image=532" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="https://unsplash.it/650/350?image=533" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="https://unsplash.it/650/350?image=531" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="https://unsplash.it/650/350?image=625" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <section class="no-padding">
+      <div class="container-fluid">
+          <div class="row no-gutter" id="item-target"></div>
+      </div>
     </section>
 
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
-            </div>
-        </div>
-    </aside>
+    <section class="hidden" id="code-out-section">
+      <div class="container-fluid">
+          <div class="row">
+            <pre class="col-md-8 col-md-offset-2">
+              <code class="tex" id="code-out"></code>
+            </pre>
+          </div>
+      </div>
+    </section>
 
     <section id="contact">
         <div class="container">
@@ -281,6 +190,41 @@
         </div>
     </section>
 
+    <script id="entry-template" type="text/x-handlebars-template">
+      % import this package
+      % \usepackage{hyperref}
+
+      \{{# if github}}
+      Github Repositories:
+        \begin{itemize}
+            \{{#each github}}
+            \item \{{name}} \\
+            \url{ \{{url}} }
+            \{{/each}}
+        \end{itemize}
+      \{{/if}}
+
+      \{{# if codecademy}}
+      Codecademy Courses:
+        \begin{itemize}
+            \{{#each codecademy}}
+            \item \{{track}} \\
+            \url{ \{{url}} }
+            \{{/each}}
+        \end{itemize}
+      \{{/if}}
+
+      \{{# if codeschool}}
+      Codecademy Courses:
+        \begin{itemize}
+            \{{#each codeschool}}
+            \item \{{course}} \\
+            \url{ \{{url}} }
+            \{{/each}}
+        \end{itemize}
+      \{{/if}}
+    </script>
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -292,8 +236,12 @@
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
 
+    <script src="js/handlebars-v3.0.1.js"></script>
+
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+    <script src="js/highlight.pack.js"></script>
 
     <script src="js/script.js"></script>
 
